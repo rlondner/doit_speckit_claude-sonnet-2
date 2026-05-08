@@ -19,7 +19,9 @@
       "Bash(curl -fsSL https://bun.sh/install)",
       "Bash(bash)",
       "Bash(pwsh -File .specify/scripts/powershell/create-new-feature.ps1 \"Create a demo/showcase mode for this Next.js app that replaces all Postgres database calls with a localStorage-backed mock data layer, so the app can run fully in the browser without any backend or database.\" -Json -ShortName \"demo-mode\")",
-      "Bash(find /c/Users/rlond/Documents/GitHub/doit_speckit-claude -name *schema* -o -name *migration* -o -name *.sql)"
+      "Bash(find /c/Users/rlond/Documents/GitHub/doit_speckit-claude -name *schema* -o -name *migration* -o -name *.sql)",
+      "PowerShell(.specify/scripts/powershell/create-new-feature.ps1 \"initial app setup - This application is a goal tracking web app called do it. There should be two columns: a left one where current goals are shown along with how many days left the user has to achieve the goal and a right one where completed goals are. Each goal can be checked using a checkbox and then either moved to the completed column or permanently deleted. To add new goals, a user can click on a button to open a new goal form in a modal title and end date fields. Goals reaching their end date within 3 days are highlighted. For the UI theme, use the design files in the subfolders of the /design/orange folder. For storage, use an environment variable to switch between localStorage \\(demo mode\\) and Postgres \\(production mode\\)\" -Json -ShortName \"goal-tracker-app\")",
+      "PowerShell(.specify/scripts/powershell/check-prerequisites.ps1 -Json -PathsOnly)"
     ]
   }
 }
