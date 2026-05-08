@@ -1,1 +1,93 @@
 @import "tailwindcss";
+
+@theme {
+  /* Radiant Catalyst color palette */
+  --color-primary: #ff7f70;
+  --color-primary-dim: #f47164;
+  --color-primary-fixed: #ff7f70;
+  --color-primary-fixed-dim: #ff7f70;
+  --color-primary-container: #ff7f70;
+  --color-on-primary: #ffffff;
+  --color-on-primary-fixed: #ffffff;
+  --color-on-primary-fixed-variant: #ff7f70;
+  --color-on-primary-container: #ffffff;
+  --color-inverse-primary: #ff9e94;
+  --color-coral-accent: #ff7f70;
+
+  --color-secondary: #64748b;
+  --color-secondary-dim: #64748b;
+  --color-secondary-fixed: #f1f5f9;
+  --color-secondary-fixed-dim: #e2e8f0;
+  --color-secondary-container: #f1f5f9;
+  --color-on-secondary: #f1f5f9;
+  --color-on-secondary-fixed: #475569;
+  --color-on-secondary-fixed-variant: #64748b;
+  --color-on-secondary-container: #475569;
+
+  --color-tertiary: #64748b;
+  --color-tertiary-dim: #475569;
+  --color-tertiary-fixed: #f1f5f9;
+  --color-tertiary-fixed-dim: #cbd5e1;
+  --color-tertiary-container: #e2e8f0;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed: #334155;
+  --color-on-tertiary-fixed-variant: #475569;
+  --color-on-tertiary-container: #475569;
+
+  --color-background: #f8fafc;
+  --color-on-background: #1e293b;
+
+  --color-surface: #f8fafc;
+  --color-surface-dim: #e2e8f0;
+  --color-surface-bright: #f8fafc;
+  --color-surface-variant: #f1f5f9;
+  --color-surface-tint: #ff7f70;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f1f5f9;
+  --color-surface-container: #f1f5f9;
+  --color-surface-container-high: #e2e8f0;
+  --color-surface-container-highest: #e2e8f0;
+  --color-on-surface: #1e293b;
+  --color-on-surface-variant: #64748b;
+  --color-inverse-surface: #0f172a;
+  --color-inverse-on-surface: #94a3b8;
+
+  --color-error: #ef4444;
+  --color-error-dim: #991b1b;
+  --color-error-container: #fee2e2;
+  --color-on-error: #fff5f5;
+  --color-on-error-container: #7f1d1d;
+
+  --color-outline: #94a3b8;
+  --color-outline-variant: #cbd5e1;
+
+  /* Font families */
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko50yygg.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2")
+    format("woff2");
+}
+
+/* Base styles */
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+}
