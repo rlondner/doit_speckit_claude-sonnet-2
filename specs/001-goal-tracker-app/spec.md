@@ -200,9 +200,13 @@ title and end date, save. Verify the updated values appear on the dashboard.
   use a database via server-side API routes.
 - **FR-012**: The dashboard greeting MUST include the count of active goals
   (e.g., "You have 4 active goals to focus on today").
-- **FR-013**: The UI MUST follow the orange/peach design system defined in the
-  `/design/orange` folder, including the Radiant Editorial color palette,
-  typography (Plus Jakarta Sans + Inter), no-line rule, and tonal layering.
+- **FR-013**: The UI MUST follow the **Radiant Catalyst** design system defined
+  in the `/design/orange` folder, using the following reference implementations:
+  `design/orange/do_it_dashboard/code.html` (dashboard),
+  `design/orange/add_new_goal_modal_orange/code.html` (Add Goal modal), and
+  `design/orange/edit_existing_goal/code.html` (Edit Goal modal). This includes
+  the warm orange/peach color palette, Plus Jakarta Sans typography, no-line
+  (tonal layering) rule, and pill-style interactive elements.
 - **FR-014**: The UI MUST be responsive across mobile (320px+), tablet (768px+),
   and desktop (1280px+) viewports.
 
@@ -246,3 +250,9 @@ title and end date, save. Verify the updated values appear on the dashboard.
   column by default.
 - The Recently Completed column shows the most recent completions first, with
   no pagination needed for the initial version.
+
+## Clarifications
+
+### Session 2026-05-08
+
+- Q: Which design system and HTML reference files govern the UI? → A: The **Radiant Catalyst** design system; references are `design/orange/do_it_dashboard/code.html` (dashboard), `design/orange/add_new_goal_modal_orange/code.html` (Add Goal modal), `design/orange/edit_existing_goal/code.html` (Edit Goal modal).
