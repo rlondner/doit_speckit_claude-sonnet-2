@@ -74,18 +74,21 @@ column with the correct days-left calculation.
 
 ---
 
-### User Story 3 - Complete a Goal (Priority: P3)
+### User Story 3 - Complete or Restore a Goal (Priority: P3)
 
 A user has achieved one of their goals. They click the checkbox on the goal
 card in the Active Goals column. The goal moves from the Active Goals column
 to the Recently Completed column, reflecting the accomplishment immediately.
+If the user marked a goal as complete by mistake, they can click the checkmark
+on the completed goal card to restore it back to the Active Goals column.
 
 **Why this priority**: Completing goals is the core loop of the app. It depends
 on US1 (dashboard display) and benefits from US2 (goal creation) but can be
 verified independently with pre-seeded data.
 
 **Independent Test**: With pre-seeded active goals, click the checkbox on one.
-Verify it disappears from Active Goals and appears in Recently Completed.
+Verify it disappears from Active Goals and appears in Recently Completed. Then
+click the checkmark on the completed goal and verify it returns to Active Goals.
 
 **Acceptance Scenarios**:
 
@@ -97,6 +100,9 @@ Verify it disappears from Active Goals and appears in Recently Completed.
 3. **Given** the user had 4 active goals, **When** they complete one, **Then**
    the Active Goals count decreases to 3 and the active goals column updates
    accordingly.
+4. **Given** a completed goal exists in the Recently Completed column, **When**
+   the user clicks its checkmark, **Then** the goal is restored to the Active
+   Goals column with its original title and end date (completion timestamp cleared).
 
 ---
 
@@ -188,7 +194,10 @@ title and end date, save. Verify the updated values appear on the dashboard.
   Goal Title (required text, max 100 characters) and End Date (required,
   must be today or later) fields.
 - **FR-007**: Users MUST be able to complete a goal by clicking a checkbox on
-  the goal card, which moves it from Active to Recently Completed.
+  the goal card, which moves it from Active to Recently Completed. Users MUST
+  also be able to restore a completed goal to active by clicking its checkmark
+  in the Recently Completed column, which clears the completion timestamp and
+  returns the goal to the Active Goals column.
 - **FR-008**: Users MUST be able to delete a goal permanently via a Delete
   action in the edit modal, preceded by a confirmation prompt.
 - **FR-009**: Users MUST be able to edit an existing goal's title and end date
@@ -208,13 +217,17 @@ title and end date, save. Verify the updated values appear on the dashboard.
   the warm orange/peach color palette, Plus Jakarta Sans typography, no-line
   (tonal layering) rule, and pill-style interactive elements.
 - **FR-014**: The UI MUST be responsive across mobile (320px+), tablet (768px+),
-  and desktop (1280px+) viewports.
+  and desktop (1280px+) viewports. On mobile, the two-column layout MUST stack
+  vertically: Active Goals column on top (full-width), Recently Completed column
+  below (full-width).
 
 ### Key Entities
 
 - **Goal**: Represents a user objective. Attributes: unique identifier, title
   (text), end date (date), status (active or completed), completion timestamp
-  (date/time, set when completed), creation timestamp.
+  (date/time, set when completed and cleared on restore), creation timestamp.
+  Lifecycle: active → completed (checkbox) → active (checkmark restore). Deletion
+  is permanent and available from the edit modal regardless of status.
 
 ## Success Criteria *(mandatory)*
 
@@ -256,3 +269,5 @@ title and end date, save. Verify the updated values appear on the dashboard.
 ### Session 2026-05-08
 
 - Q: Which design system and HTML reference files govern the UI? → A: The **Radiant Catalyst** design system; references are `design/orange/do_it_dashboard/code.html` (dashboard), `design/orange/add_new_goal_modal_orange/code.html` (Add Goal modal), `design/orange/edit_existing_goal/code.html` (Edit Goal modal).
+- Q: How does the two-column layout adapt on mobile viewports? → A: Stack vertically — Active Goals on top (full-width), Recently Completed below (full-width).
+- Q: Can a completed goal be restored to active? → A: Yes — clicking the checkmark on a completed goal restores it to active (clears completion timestamp).
