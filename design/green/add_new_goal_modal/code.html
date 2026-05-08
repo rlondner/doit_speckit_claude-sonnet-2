@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Do It - Add New Goal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#503921",
+              "primary-container": "#89f0cb",
+              "on-primary-fixed-variant": "#00644c",
+              "secondary-container": "#e1e1f5",
+              "tertiary": "#71563d",
+              "on-primary-fixed": "#004533",
+              "on-error": "#ffefee",
+              "tertiary-container": "#fed9b8",
+              "on-secondary-fixed-variant": "#595a6b",
+              "tertiary-fixed-dim": "#efcbab",
+              "on-secondary-fixed": "#3d3e4e",
+              "secondary-fixed": "#e1e1f5",
+              "primary-dim": "#005b45",
+              "inverse-surface": "#0a0f12",
+              "on-tertiary-fixed-variant": "#6f553b",
+              "primary-fixed-dim": "#7be2bd",
+              "on-surface": "#2a2f32",
+              "tertiary-fixed": "#fed9b8",
+              "surface-tint": "#00684f",
+              "tertiary-dim": "#644b32",
+              "on-tertiary-container": "#644b32",
+              "surface-dim": "#ced5db",
+              "surface-variant": "#d7dee3",
+              "error": "#b31b25",
+              "on-error-container": "#570008",
+              "surface-container-lowest": "#ffffff",
+              "inverse-on-surface": "#999da1",
+              "inverse-primary": "#98ffd9",
+              "secondary-fixed-dim": "#d3d3e6",
+              "surface-container-low": "#ecf1f6",
+              "primary": "#00684f",
+              "error-container": "#fb5151",
+              "surface-bright": "#f3f7fb",
+              "outline-variant": "#a9aeb1",
+              "background": "#f3f7fb",
+              "surface": "#f3f7fb",
+              "secondary-dim": "#4d4f5f",
+              "surface-container-highest": "#d7dee3",
+              "on-secondary": "#f3f1ff",
+              "error-dim": "#9f0519",
+              "primary-fixed": "#89f0cb",
+              "on-primary-container": "#005a44",
+              "surface-container": "#e3e9ee",
+              "surface-container-high": "#dde3e8",
+              "on-background": "#2a2f32",
+              "on-tertiary": "#fff0e5",
+              "on-secondary-container": "#4f5161",
+              "on-primary": "#c6ffe7",
+              "on-surface-variant": "#575c60",
+              "secondary": "#595a6b",
+              "outline": "#73777b"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: linear-gradient(135deg, #89f0cb 0%, #e1e1f5 100%);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased overflow-hidden">
+<!-- DASHBOARD BACKGROUND (DIMMED) -->
+<div class="fixed inset-0 flex overflow-hidden opacity-40 grayscale-[20%] pointer-events-none">
+<!-- SideNavBar Anchor -->
+<aside class="h-screen w-64 bg-[#ecf1f6] flex flex-col py-8 pr-4 font-['Inter'] leading-relaxed shrink-0">
+<div class="px-8 mb-10">
+<span class="text-xl font-extrabold text-[#00684f]">Do It</span>
+</div>
+<nav class="flex-1 space-y-1">
+<div class="flex items-center gap-3 px-8 py-3 bg-[#ffffff] text-[#00684f] rounded-r-full font-bold shadow-[0_12px_32px_-4px_rgba(0,104,79,0.08)]">
+<span class="material-symbols-outlined" data-icon="target">target</span>
+<span>Current Goals</span>
+</div>
+<div class="flex items-center gap-3 px-8 py-3 text-slate-600">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+<span>Completed</span>
+</div>
+<div class="flex items-center gap-3 px-8 py-3 text-slate-600">
+<span class="material-symbols-outlined" data-icon="stars">stars</span>
+<span>Milestones</span>
+</div>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 p-8 max-w-screen-2xl mx-auto w-full">
+<!-- TopNavBar Anchor -->
+<header class="flex justify-between items-center w-full mb-12 font-['Plus_Jakarta_Sans'] antialiased tracking-tight">
+<h1 class="text-2xl font-bold tracking-tighter text-[#00684f]">Dashboard</h1>
+<div class="flex items-center gap-6">
+<div class="flex gap-8 text-slate-500 font-medium">
+<span class="text-[#00684f] border-b-2 border-[#00684f] pb-1 font-semibold">Dashboard</span>
+<span>Analytics</span>
+<span>Community</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-400">notifications</span>
+<div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden">
+<img alt="User profile avatar" data-alt="close-up portrait of a professional woman with a warm smile in a brightly lit modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcA5zhsKzxEN2I8I-AReQZPRrwv-eHaLzTVSwcvRBOF3IfVGXIBgq43I7U_UELtn7hHWJBjgT0gBY1MV2LVY5gFy9duqDVoL0No8CvuGGWS-92xZg_trMKJUtwmcpifmRW5gaujT3lcxt-Q5HlnrMIPuVEARu34iGQDYtRp6BvErVxViLLYPtTWfKs1VIxhTRogOtla1_vp18k4cSzyFWhN5jXMYapVCu6asCqmMUdqZ7OKkAZAv_UptvkSyidvmAS029pz-pnTbE"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Content Mock -->
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-8 space-y-8">
+<div class="bg-surface-container-lowest p-8 rounded-xl">
+<div class="h-4 w-32 bg-surface-container mb-4 rounded-full"></div>
+<div class="h-32 w-full bg-surface-container-low rounded-xl"></div>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="bg-surface-container-lowest h-64 rounded-xl"></div>
+<div class="bg-surface-container-lowest h-64 rounded-xl"></div>
+</div>
+</div>
+<div class="col-span-4 bg-surface-container-lowest rounded-xl p-8">
+<div class="h-8 w-48 bg-surface-container mb-6 rounded-full"></div>
+<div class="space-y-4">
+<div class="h-12 w-full bg-surface-container-low rounded-lg"></div>
+<div class="h-12 w-full bg-surface-container-low rounded-lg"></div>
+<div class="h-12 w-full bg-surface-container-low rounded-lg"></div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- MODAL OVERLAY -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
+<!-- Backdrop Blur -->
+<div class="absolute inset-0 bg-on-surface/20 backdrop-blur-sm"></div>
+<!-- Modal Container -->
+<div class="relative w-full max-w-lg bg-surface-container-lowest rounded-xl shadow-[0_32px_64px_-12px_rgba(0,104,79,0.12)] overflow-hidden flex flex-col">
+<!-- Modal Header (Soft Pastel Gradient) -->
+<div class="glass-header px-8 pt-10 pb-12 relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline text-3xl font-bold tracking-tight text-on-primary-container mb-2">Ignite a New Path</h2>
+<p class="font-body text-on-primary-container/70 leading-relaxed">Define your objective and set the milestone. Clarity is the first step to achievement.</p>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-8 -bottom-8 w-32 h-32 bg-primary-container/30 rounded-full blur-2xl"></div>
+</div>
+<!-- Modal Body -->
+<div class="p-8 pt-10 space-y-8">
+<!-- Input Group: Goal Title -->
+<div class="space-y-3">
+<label class="font-headline text-sm font-bold tracking-wide text-on-surface-variant uppercase ml-1" for="goal-title">Goal Title</label>
+<div class="relative group">
+<input class="w-full px-5 py-4 bg-surface-container-low border-none rounded-xl font-body text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200" id="goal-title" placeholder="e.g., Master Minimalist UI Design" type="text"/>
+</div>
+</div>
+<!-- Two Column Layout for Date and Priority -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Input Group: End Date -->
+<div class="space-y-3">
+<label class="font-headline text-sm font-bold tracking-wide text-on-surface-variant uppercase ml-1" for="end-date">End Date</label>
+<div class="relative">
+<input class="w-full px-5 py-4 bg-surface-container-low border-none rounded-xl font-body text-on-surface focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all duration-200" id="end-date" type="date"/>
+</div>
+</div>
+<!-- Input Group: Category/Context -->
+<div class="space-y-3">
+<label class="font-headline text-sm font-bold tracking-wide text-on-surface-variant uppercase ml-1">Focus Area</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold hover:bg-secondary transition-colors">Professional</button>
+<button class="px-4 py-2 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold border-2 border-transparent">Personal</button>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="flex items-center justify-end gap-4 pt-4">
+<button class="px-8 py-4 font-headline font-bold text-on-surface-variant hover:text-on-surface transition-colors">
+                        Cancel
+                    </button>
+<button class="px-10 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-headline font-bold rounded-full shadow-[0_12px_24px_-8px_rgba(0,104,79,0.3)] hover:scale-[1.02] active:scale-95 transition-all">
+                        Create Goal
+                    </button>
+</div>
+</div>
+<!-- Asymmetric Accent -->
+<div class="absolute top-4 right-4 h-12 w-12 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-md cursor-pointer hover:bg-white/40 transition-colors">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="close">close</span>
+</div>
+</div>
+</div>
+<!-- Contextual FAB (Suppressed as per rules for Modal context) -->
+</body></html>

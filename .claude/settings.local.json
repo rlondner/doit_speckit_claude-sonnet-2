@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/setup-plan.ps1 -Json 2>&1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/update-agent-context.ps1 -AgentType claude 2>&1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/check-prerequisites.ps1 -Json -PathsOnly)",
+      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/check-prerequisites.ps1 -Json)",
+      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm dlx:*)",
+      "Bash(pnpm lint:*)",
+      "Bash(pnpm build:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/setup-plan.ps1 -Json)",
+      "Bash(find app:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/update-agent-context.ps1 -AgentType claude)",
+      "Bash(bash .specify/scripts/powershell/create-new-feature.ps1 \"edit existing goal and uncheck completed goal - add a new modal form to edit an existing goal from the list of Active Goals only. use all the design instructions, static HTML code and screenshot in the ./specs/design/orange/edit_existing_goal folder. Add an edit button for each active goal in the main view. Make the checked button of the Completed Goals column clickable so a user can uncheck a goal and put it back in the Active Goals column \\(in case he made a mistake while completing a goal\\)\" --json --short-name \"edit-goal-uncheck\" \"Edit Goal and Uncheck Completed\")",
+      "Bash(ls:*)",
+      "Bash(powershell.exe -File .specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks 2>&1)",
+      "Bash(curl -fsSL https://bun.sh/install)",
+      "Bash(bash)",
+      "Bash(pwsh -File .specify/scripts/powershell/create-new-feature.ps1 \"Create a demo/showcase mode for this Next.js app that replaces all Postgres database calls with a localStorage-backed mock data layer, so the app can run fully in the browser without any backend or database.\" -Json -ShortName \"demo-mode\")",
+      "Bash(find /c/Users/rlond/Documents/GitHub/doit_speckit-claude -name *schema* -o -name *migration* -o -name *.sql)"
+    ]
+  }
+}
