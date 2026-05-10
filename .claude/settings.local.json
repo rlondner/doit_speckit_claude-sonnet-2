@@ -25,7 +25,14 @@
       "PowerShell(.specify/scripts/powershell/setup-plan.ps1 -Json)",
       "PowerShell(.specify/scripts/powershell/update-agent-context.ps1 -AgentType claude)",
       "PowerShell(.specify/scripts/powershell/check-prerequisites.ps1 -Json)",
-      "Bash(npx shadcn@latest init -d)"
+      "Bash(npx shadcn@latest init -d)",
+      "Bash(npx shadcn@latest add dialog input label checkbox badge --overwrite)",
+      "Bash(npx shadcn@latest add alert-dialog)",
+      "Bash(npx tsc:*)",
+      "Bash(sed:*)",
+      "Bash(timeout 20 npm run dev)",
+      "Bash(npm run:*)",
+      "Bash(npx eslint:*)"
     ]
   }
 }
